@@ -147,6 +147,35 @@ a:hover {
   animation-delay: 1.2s;
 }
 
+/* Round social icon buttons below hero text */
+.round-icon-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-start;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4a69bd;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 0 8px #4a69bd;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.icon-btn:hover {
+  background: #3650a4;
+  box-shadow: 0 0 16px #6b8aff;
+  transform: scale(1.15);
+}
+
 /* Social icons */
 #socials, #socials-contact {
   display: flex;
