@@ -13,7 +13,7 @@ document.querySelectorAll('nav button').forEach(button => {
       clickSound.play();
     }
   });
-  
+
   button.addEventListener('mouseenter', () => {
     if (hoverSound) {
       hoverSound.currentTime = 0;
