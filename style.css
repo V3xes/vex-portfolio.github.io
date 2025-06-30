@@ -1,14 +1,9 @@
-/* Reset & Base */
-* {
-  box-sizing: border-box;
-}
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(145deg, #121217, #1a1a2a);
   color: #e0f0ff;
   scroll-behavior: smooth;
-  line-height: 1.5;
 }
 
 .top-bar {
@@ -37,13 +32,11 @@ body {
   cursor: pointer;
 }
 
-.top-bar button:hover,
-.top-bar button:focus {
+.top-bar button:hover {
   background-color: #334a6e;
   transform: scale(1.1);
   box-shadow: 0 0 10px #50aaff88;
   text-shadow: 0 0 10px #50aaff88;
-  outline: none;
 }
 
 .hero {
@@ -52,7 +45,6 @@ body {
   justify-content: center;
   padding: 3rem 2rem;
   gap: 3rem;
-  flex-wrap: wrap;
 }
 
 .hero-img img {
@@ -66,7 +58,6 @@ body {
 
 .hero-text {
   max-width: 600px;
-  min-width: 260px;
 }
 
 .highlight {
@@ -85,47 +76,22 @@ body {
 }
 
 #socials a:hover,
-#socials a:focus,
-#socials-contact a:hover,
-#socials-contact a:focus {
+#socials-contact a:hover {
   color: #88cfff;
   transform: scale(1.2);
-  outline: none;
 }
 
-main {
+section {
+  padding: 4rem 2rem;
   max-width: 900px;
-  margin: 0 auto 4rem;
-  padding: 0 1rem;
-}
-
-.content-section {
-  background: #1e1e2e;
-  border-radius: 16px;
-  box-shadow: 0 0 15px #50aaff55;
-  padding: 3rem 2rem;
-  margin-bottom: 2.5rem;
-  color: #cce4ff;
-  border: 1px solid #50aaff88;
-  transition: box-shadow 0.3s ease;
-}
-
-.content-section:hover {
-  box-shadow: 0 0 25px #50aaffaa;
+  margin: 0 auto;
 }
 
 .contact-box {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-box label {
-  font-weight: bold;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  background: #1e1e2e;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #50aaff55;
 }
 
 footer {
@@ -136,23 +102,20 @@ footer {
   border-top: 1px solid #333;
 }
 
-/* Slide-in animations */
-.pre-animate {
-  opacity: 0;
-  transform: translateX(-150%);
-  transition: none;
+/* Animations */
+@keyframes slide-in-left {
+  from {opacity: 0; transform: translateX(-50px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+@keyframes slide-in-right {
+  from {opacity: 0; transform: translateX(50px);}
+  to {opacity: 1; transform: translateX(0);}
 }
 
-.slide-in-left.pre-animate {
-  transform: translateX(-150%);
+.slide-in-left {
+  animation: slide-in-left 0.8s ease forwards;
 }
 
-.slide-in-right.pre-animate {
-  transform: translateX(150%);
-}
-
-.content-section.animate {
-  opacity: 1;
-  transform: translateX(0);
-  transition: transform 0.8s ease, opacity 0.8s ease;
+.slide-in-right {
+  animation: slide-in-right 0.8s ease forwards;
 }
