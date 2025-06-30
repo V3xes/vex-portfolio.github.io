@@ -30,3 +30,21 @@ document.querySelectorAll('#socials a, #socials-contact a').forEach(link => {
     }
   });
 });
+
+// Animate sections when they scroll into view
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.content-section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        entry.target.classList.remove('pre-animate');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
