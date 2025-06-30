@@ -100,12 +100,18 @@ main {
 }
 
 .content-section {
-  padding: 3rem 1rem;
-  margin-bottom: 2rem;
-  background: #1e1e2e;
+  background: rgba(30, 30, 46, 0.85);
   border-radius: 16px;
-  box-shadow: 0 0 15px #50aaff55;
+  box-shadow: 0 0 20px rgba(80, 170, 255, 0.4);
+  padding: 3rem 2rem;
+  margin-bottom: 2.5rem;
   color: #cce4ff;
+  border: 1px solid #50aaff88;
+  transition: box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+  box-shadow: 0 0 30px rgba(80, 170, 255, 0.7);
 }
 
 .contact-box {
@@ -130,32 +136,23 @@ footer {
   border-top: 1px solid #333;
 }
 
-/* Animations */
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* Slide-in animations */
+.pre-animate {
+  opacity: 0;
+  transform: translateX(-150%);
+  transition: none;
 }
 
-.slide-in-left {
-  animation: slide-in-left 0.8s ease forwards;
+.slide-in-left.pre-animate {
+  transform: translateX(-150%);
 }
 
-.slide-in-right {
-  animation: slide-in-right 0.8s ease forwards;
+.slide-in-right.pre-animate {
+  transform: translateX(150%);
+}
+
+.content-section.animate {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.8s ease, opacity 0.8s ease;
 }
