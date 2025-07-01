@@ -223,16 +223,23 @@ footer {
 }
 
 /* === Projects Section === */
-.project-card {
-  background: rgba(40, 40, 70, 0.85);
+.project-subsection {
+  background: rgba(55, 55, 85, 0.9);
   border-radius: 14px;
-  padding: 1.8rem 2rem;
+  padding: 1.5rem 1.8rem;
   margin: 1.5rem 0;
-  box-shadow: 0 0 20px rgba(100, 140, 255, 0.4);
+  box-shadow: 0 0 25px rgba(80, 110, 180, 0.6);
+  border: 2px solid #4a69bd;
   color: #c0d0ff;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.project-card h3 {
+.project-subsection:hover {
+  box-shadow: 0 0 40px rgba(100, 140, 255, 0.8);
+  border-color: #6490ff;
+}
+
+.project-subsection h3 {
   margin-top: 0;
   color: #89aaff;
   text-shadow: 0 0 8px #4a69bd;
@@ -274,13 +281,13 @@ footer {
   box-shadow: 0 0 18px #6b8aff;
 }
 
-.project-card ul {
+.project-subsection ul {
   padding-left: 1.4rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.project-card ul li {
+.project-subsection ul li {
   margin-bottom: 0.6rem;
 }
 
