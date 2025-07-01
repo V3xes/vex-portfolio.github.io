@@ -1,4 +1,4 @@
-/* Base styling */
+/* === Base Styling === */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #2b2f5a, #1e1e2f);
@@ -18,7 +18,46 @@ a:hover {
   color: #40a9ff;
 }
 
-/* Frames around sections */
+/* === Top Navigation Bar === */
+.top-bar {
+  background: #1e1e3a;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.top-bar button,
+.top-bar a.github-btn {
+  background: transparent;
+  border: none;
+  color: #ddd;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 0 6px transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.top-bar button:hover,
+.top-bar a.github-btn:hover {
+  background: #4a69bd;
+  color: #fff;
+  box-shadow: 0 0 10px #4a69bd;
+  transform: scale(1.05);
+}
+
+/* === Section Frames === */
 .framed-box {
   background: rgba(30, 30, 50, 0.8);
   border-radius: 16px;
@@ -36,68 +75,7 @@ a:hover {
   box-shadow: 0 0 30px #6490ff;
 }
 
-/* Top navigation bar */
-.top-bar {
-  background: #1e1e3a;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-/* Buttons in nav */
-.top-bar button {
-  background: transparent;
-  border: none;
-  color: #ddd;
-  font-size: 1.1rem;
-  cursor: pointer;
-  padding: 0.6rem 1rem;
-  border-radius: 12px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: 600;
-  box-shadow: 0 0 6px transparent;
-}
-
-.top-bar button:hover,
-.top-bar button.active {
-  background: #4a69bd;
-  color: #fff;
-  box-shadow: 0 0 10px #4a69bd;
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-}
-
-/* GitHub nav link */
-.top-bar a.github-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: transparent;
-  border: none;
-  color: #ddd;
-  font-size: 1.1rem;
-  cursor: pointer;
-  padding: 0.6rem 1rem;
-  border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 6px transparent;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.top-bar a.github-btn:hover {
-  background: #333;
-  color: #fff;
-  box-shadow: 0 0 10px #999;
-  transform: scale(1.05);
-}
-
-/* Hero section */
+/* === Hero Section === */
 .hero {
   display: flex;
   align-items: center;
@@ -147,7 +125,7 @@ a:hover {
   animation-delay: 1.2s;
 }
 
-/* Round social icon buttons below hero text */
+/* === Round Social Icon Buttons === */
 .round-icon-buttons {
   margin-top: 1.5rem;
   display: flex;
@@ -176,10 +154,24 @@ a:hover {
   transform: scale(1.15);
 }
 
-/* Social icons */
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.icon-btn:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #fff);
+}
+
+/* === Social Icons === */
 #socials, #socials-contact {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 #socials a, #socials-contact a {
@@ -194,7 +186,7 @@ a:hover {
   filter: drop-shadow(0 0 6px #6490ff);
 }
 
-/* Section headings */
+/* === Section Headings === */
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -203,7 +195,7 @@ h2 {
   animation: fadeInUp 1s ease forwards;
 }
 
-/* Contact box */
+/* === Contact Box === */
 .contact-box {
   display: flex;
   flex-direction: column;
@@ -219,7 +211,7 @@ h2 {
   gap: 0.6rem;
 }
 
-/* Footer */
+/* === Footer === */
 footer {
   text-align: center;
   padding: 1rem 0;
@@ -230,7 +222,69 @@ footer {
   margin-top: 3rem;
 }
 
-/* Animations */
+/* === Projects Section === */
+.project-card {
+  background: rgba(40, 40, 70, 0.85);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 20px rgba(100, 140, 255, 0.4);
+  color: #c0d0ff;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #89aaff;
+  text-shadow: 0 0 8px #4a69bd;
+}
+
+.project-screenshots {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.project-screenshots img {
+  max-height: 140px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #4a69bd;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.project-screenshots img:hover {
+  transform: scale(1.05);
+}
+
+.project-link-btn {
+  display: inline-block;
+  padding: 0.6rem 1.3rem;
+  background: #4a69bd;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 12px #4a69bd;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-link-btn:hover {
+  background: #3650a4;
+  box-shadow: 0 0 18px #6b8aff;
+}
+
+.project-card ul {
+  padding-left: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-card ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* === Animations === */
 @keyframes slideInLeft {
   from {
     transform: translateX(-200px);
