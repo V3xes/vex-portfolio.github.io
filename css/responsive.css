@@ -1,0 +1,7 @@
+
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .content { margin-left: 0; padding: 2rem; }
+  .features { flex-direction: column; align-items: center; }
+  .feature-card { width: 90%; }
+}

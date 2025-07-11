@@ -1,0 +1,68 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  color: var(--text-color);
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  padding: 2rem;
+  background: #111;
+  position: fixed;
+  height: 100%;
+}
+.sidebar h2 { color: var(--accent-color); }
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+.sidebar a:hover { color: var(--accent-color); }
+.content {
+  margin-left: 240px;
+  padding: 3rem;
+  width: 100%;
+}
+.avatar-container {
+  text-align: center;
+  animation: bob 3s ease-in-out infinite;
+}
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.features {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.feature-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 300px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+.feature-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.feature-card.fade-in.animated {
+  opacity: 1;
+  transform: translateY(0);
+}

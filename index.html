@@ -1,120 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vex Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Assistant Portfolio</title>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
 </head>
 <body>
-  <audio id="hover-sound" src="hover.mp3" preload="auto"></audio>
-  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
-
-  <nav class="top-bar">
-    <button data-target="home">🏠 Home</button>
-    <button data-target="about">👤 About</button>
-    <button data-target="projects">🛠 Projects</button>
-    <button data-target="gfx">🎨 GFX</button>
-    <button data-target="contact">📫 Contact</button>
-    <a href="https://github.com/V3xes" target="_blank" class="github-btn icon-btn" aria-label="GitHub">
-      <img src="icons/github.png" alt="GitHub" />
-    </a>
-  </nav>
-
-  <header class="hero" id="home">
-    <div class="hero-img slide-in-left">
-      <img src="avatarrender.png" alt="avatarrender" />
-    </div>
-    <div class="hero-text slide-in-right framed-box">
-      <h1>Hello, I'm <span class="highlight">Vex</span> 🎮</h1>
-      <p>Roblox & Web Developer ✨</p>
-
-      <div class="round-icon-buttons">
-        <a href="https://tiktok.com" class="icon-btn" target="_blank" aria-label="TikTok">
-          <img src="icons/tiktok.png" alt="TikTok" />
-        </a>
-        <a href="https://github.com/V3xes" class="icon-btn" target="_blank" aria-label="GitHub">
-          <img src="icons/github.png" alt="GitHub" />
-        </a>
-        <a href="https://instagram.com" class="icon-btn" target="_blank" aria-label="Instagram">
-          <img src="icons/instagram.png" alt="Instagram" />
-        </a>
-        <a href="https://twitter.com" class="icon-btn" target="_blank" aria-label="Twitter">
-          <img src="icons/twitter.png" alt="Twitter" />
-        </a>
-        <a href="https://youtube.com" class="icon-btn" target="_blank" aria-label="YouTube">
-          <img src="icons/youtube.png" alt="YouTube" />
-        </a>
+  <aside class="sidebar">
+    <h2>⚡ AI Tool</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="content">
+    <header>
+      <div class="avatar-container">
+        <img src="assets/avatars/avatar-placeholder.png" class="avatar" alt="AI Avatar"/>
       </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="about" class="framed-box">
-      <h2>About Me</h2>
-      <p>I started from scratch, and so can you.</p>
-    </section>
-
-    <section id="projects" class="framed-box">
-      <h2>Projects</h2>
-      <p>Showcasing my work from Roblox and beyond.</p>
-
-      <div class="project-subsection framed-box">
-        <h3>📝 List Maker</h3>
-
-        <div class="project-screenshots">
-          <img src="screenshots/listmaker-1.png" alt="List Maker UI Screenshot" />
-          <img src="screenshots/listmaker-2.png" alt="List Maker Retro Theme" />
-        </div>
-
-        <p>
-          <strong>List Maker</strong> is a retro-themed desktop app built using Python and Tkinter. It’s designed for organizing gift lists, shopping plans, or to-dos in a clean, nostalgic UI styled after old-school operating systems.
-        </p>
-
-        <ul>
-          <li>💰 Automatic total cost calculation</li>
-          <li>📁 Import/export support for saving and restoring lists</li>
-          <li>🎮 A unique 8-bit styled UI inspired by classic PlayStation menus</li>
-          <li>🖱 Button to open all item links at once in your browser</li>
-          <li>📋 Supports multiple separate lists (like events or holidays)</li>
-        </ul>
-
-        <p>
-          This project merges functionality with nostalgic style. It's lightweight, polished, and great for managing gifts, shopping, or personal tasks with style.
-        </p>
-
-        <a href="https://github.com/V3xes/Retro-List-Maker/tree/main" target="_blank" class="project-link-btn">
-          View on GitHub
-        </a>
+      <h1>Hello! I’m your Next-Gen AI Assistant</h1>
+      <p>Solving collaboration problems through GPT, NLP, smart workflows and behavioral data.</p>
+    </header>
+    <section class="features">
+      <div class="feature-card fade-in">
+        <img src="assets/images/feature1.jpg" alt="Feature 1"/>
+        <h3>Real-Time Adaptive Learning</h3>
+        <p>Learns how you work, to remove friction in your flow.</p>
       </div>
-
-      <!-- Add more project-subsection blocks below if you want -->
-
-    </section>
-
-    <section id="gfx" class="framed-box">
-      <h2>GFX</h2>
-      <p>Custom renders, icons, and banners created in Blender and Photoshop.</p>
-    </section>
-
-    <section id="contact" class="framed-box">
-      <h2>Contact Me</h2>
-      <div class="contact-box">
-        <label><i class="fas fa-envelope"></i> Email</label>
-        <p>vex@example.com</p>
-        <div id="socials-contact">
-          <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-          <a href="https://roblox.com" target="_blank"><i class="fas fa-gamepad"></i></a>
-        </div>
+      <div class="feature-card fade-in delay-1">
+        <img src="assets/images/feature2.jpg" alt="Feature 2"/>
+        <h3>Multi-Platform Automation</h3>
+        <p>Connects apps, files, tasks, and people with context-aware magic.</p>
       </div>
     </section>
   </main>
-
-  <footer>&copy; 2025 Vex. All rights reserved.</footer>
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animation.js"></script>
 </body>
 </html>
